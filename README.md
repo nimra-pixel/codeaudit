@@ -8,7 +8,6 @@
 [![LangGraph](https://img.shields.io/badge/LangGraph-1.2+-FF6B35?style=flat)](https://langchain-ai.github.io/langgraph/)
 [![MCP](https://img.shields.io/badge/MCP-FastMCP-8B5CF6?style=flat)](https://github.com/jlowin/fastmcp)
 [![Groq](https://img.shields.io/badge/Groq-Llama%203.3%2070B-F55036?style=flat)](https://groq.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat)](LICENSE)
 [![Built by Nimra](https://img.shields.io/badge/Built%20by-Nimra%20Tariq-1A3A5C?style=flat&logo=github)](https://github.com/nimra-pixel)
 
 **Paste any code → Get security vulnerabilities, quality issues, performance bottlenecks, auto-fix, and a graded report.**
