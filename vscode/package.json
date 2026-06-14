@@ -1,0 +1,55 @@
+{
+  "name": "codeaudit-agent",
+  "displayName": "CodeAudit Agent",
+  "description": "AI-powered security, quality & performance code auditor powered by LangGraph + MCP",
+  "version": "1.0.0",
+  "publisher": "nimra-pixel",
+  "engines": { "vscode": "^1.85.0" },
+  "categories": ["Linters", "Other"],
+  "activationEvents": ["onCommand:codeaudit.auditFile", "onCommand:codeaudit.auditSelection"],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codeaudit.auditFile",
+        "title": "CodeAudit: Audit This File"
+      },
+      {
+        "command": "codeaudit.auditSelection",
+        "title": "CodeAudit: Audit Selected Code"
+      },
+      {
+        "command": "codeaudit.quickScan",
+        "title": "CodeAudit: Quick Security Scan"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "codeaudit.auditSelection",
+          "when": "editorHasSelection",
+          "group": "codeaudit"
+        },
+        {
+          "command": "codeaudit.auditFile",
+          "group": "codeaudit"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "CodeAudit",
+      "properties": {
+        "codeaudit.mcpServerUrl": {
+          "type": "string",
+          "default": "http://localhost:8765",
+          "description": "URL of the CodeAudit MCP server"
+        },
+        "codeaudit.autoAuditOnSave": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically audit files on save"
+        }
+      }
+    }
+  }
+}
